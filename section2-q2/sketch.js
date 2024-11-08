@@ -19,7 +19,7 @@ function setup() {
       }
       if ((i + j) % 2 === 1 && 4 < j) {
         fill(0);
-        ellipse(x + s / 2, y + s / 2, d, d);
+        ellipse(x + s / 2, y + s / 2, d);
       }
       // BLANK[1] (hint: rectのx座標は size * i, y座標はsize * j)
     }

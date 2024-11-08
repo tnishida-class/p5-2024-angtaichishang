@@ -8,7 +8,7 @@ function setup() {
     if (i < 5) {
       stroke(0, 0, 255);
     } else {
-      stroke(0, 0, 255);
+      stroke(255, 0, 0);
     }
     ellipse(width / 2, height / 2, d, d);
     // BLANK[1]
