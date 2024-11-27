@@ -16,12 +16,13 @@ function draw() {
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
-    b.size = random(10, 100);
   }
-  if (frameCount % 30 === 0) {
+
+  if (frameCount % 20 === 0) {
     const b = {
       x: random(width),
       y: random(height),
+      size: random(10, 70),
       vx: random(-3, 3),
       vy: random(-3, 3),
     };
