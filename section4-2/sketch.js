@@ -4,30 +4,32 @@
 
 let balls;
 
-function setup(){
+function setup() {
   createCanvas(windowWidth, windowHeight);
   balls = [];
 }
 
-function draw(){
+function draw() {
   background(160, 192, 255);
-  for(let i = 0; i < balls.length; i++){
+  for (let i = 0; i < balls.length; i++) {
     let b = balls[i];
     ellipse(b.x, b.y, b.size);
     b.x += b.vx;
     b.y += b.vy;
   }
-}
 
-function mouseDragged(){
-  const dx = mouseX - pmouseX;
-  const dy = mouseY - pmouseY;
-  if(mag(dx, dy) > 5){
-    const b = { x: mouseX, y: mouseY, size: 20, vx: dx, vy: dy };
+  if (frameCount % 20 === 0) {
+    const b = {
+      x: random(width),
+      y: random(height),
+      size: random(10, 70),
+      vx: random(-3, 3),
+      vy: random(-3, 3),
+    };
     balls.push(b);
   }
 }
 
-function windowResized(){
+function windowResized() {
   resizeCanvas(windowWidth, windowHeight);
 }
